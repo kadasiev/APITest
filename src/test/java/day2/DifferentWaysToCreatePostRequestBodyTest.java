@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.Test;
 
-public class DiffWaysToCreatePostRequestBody {
+public class DifferentWaysToCreatePostRequestBodyTest {
 
 //  @Test(priority = 1)
   public void testPostUsingHashMap() {
