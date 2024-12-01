@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class CookiesDemoTest {
 
-//  @Test
+  @Test
   public void testCookies() {
     when()
         .get("https://www.google.com/")

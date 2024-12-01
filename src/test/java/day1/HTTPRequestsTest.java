@@ -11,7 +11,7 @@ public class HTTPRequestsTest {
 
   private int id;
 
-  @Test(priority = 1)
+  @Test()
   public void getUsers() {
     when()
         .get("https://reqres.in/api/users?page=2")
@@ -21,7 +21,7 @@ public class HTTPRequestsTest {
         .log().all();
   }
 
-  @Test(priority = 2)
+  @Test()
   public void createUser() {
     HashMap<String, String> data = new HashMap<>();
     data.put("name", "pavan");
@@ -36,7 +36,7 @@ public class HTTPRequestsTest {
         .getInt("id");
   }
 
-  @Test(priority = 3, dependsOnMethods = {"createUser"})
+  @Test(dependsOnMethods = {"createUser"})
   public void updateUser() {
     HashMap<String, String> data = new HashMap<>();
     data.put("name", "john");
@@ -53,7 +53,7 @@ public class HTTPRequestsTest {
         .all();
   }
 
-  @Test(priority = 4, dependsOnMethods = {"createUser"})
+  @Test(dependsOnMethods = {"createUser"})
   public void deleteUser() {
     when()
         .delete("https://reqres.in/api/users/" + id)

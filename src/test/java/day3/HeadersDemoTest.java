@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class HeadersDemoTest {
 
-    @Test
+  @Test
   public void testHeaders() {
     when()
         .get("https://www.google.com/")
@@ -21,7 +21,7 @@ public class HeadersDemoTest {
         .log().headers();
   }
 
-//  @Test
+  @Test
   public void getHeaders() {
     Response response = when()
         .get("https://www.google.com/");

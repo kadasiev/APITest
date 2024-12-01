@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class DifferentWaysToCreatePostRequestBodyTest {
 
-//  @Test(priority = 1)
+//  @Test()
   public void testPostUsingHashMap() {
     HashMap<String, Object> data = new HashMap<>();
     data.put("name", "Scott");
@@ -39,7 +39,7 @@ public class DifferentWaysToCreatePostRequestBodyTest {
         .log().all();
   }
 
-//  @Test(priority = 1)
+//  @Test()
   public void testPostUsingJSONLibrary() {
       JSONObject data = new JSONObject();
       data.put("name", "Scott");
@@ -63,7 +63,7 @@ public class DifferentWaysToCreatePostRequestBodyTest {
         .log().all();
   }
 
-//  @Test(priority = 1)
+//  @Test()
   public void testPostUsingPOJO() {
     POJOPostRequest data = new POJOPostRequest();
     data.setName("Scott");
@@ -87,7 +87,7 @@ public class DifferentWaysToCreatePostRequestBodyTest {
         .log().all();
   }
 
-  @Test(priority = 1)
+  @Test()
   public void testPostUsingExternalJSONFile() throws FileNotFoundException {
     JSONObject jsonObject = new JSONObject(new JSONTokener(new FileReader(".\\src\\test\\resources\\body.json")));
 
@@ -107,7 +107,7 @@ public class DifferentWaysToCreatePostRequestBodyTest {
         .log().all();
   }
 
-  //@Test(priority = 2)
+  //@Test()
   public void testDelete() {
     when()
         .delete("http://localhost:3000/students/4")
